@@ -61,11 +61,12 @@ html, body {
 
 
 :root{
-
+font-family: "Libre Baskerville", serif;
 }
 
 html{
-    
+    background: url(images/tulipField.jpg);
+    background-position: 50%;
 }
 
 body{
@@ -97,14 +98,17 @@ main{
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    font-family: "Libre Baskerville", serif;
-    background: linear-gradient(rgb(112, 112, 235),rgb(138, 138, 197),rgb(160, 160, 233),pink,rgb(210, 110, 126));
-    color: white;
+    background: rgba(255, 255, 255, 0.571);
+    color: black;
     position: relative;
 }
 
 .container h1{
     text-align: center;
+}
+
+.container h2{
+    font-weight: 300;
 }
 
 [src*=linked]:first-of-type{
@@ -118,10 +122,32 @@ main{
 
 .leftBox{    
     width: 10%;
-    heigth: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+.iLoveYou{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.talkBox{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.763);
+    text-align: center;
+}
+
+.talkBox h3{
+    padding-top: 5%;
+}
+
+.talkBox p, .talkBox h3{
+    padding-bottom: 5%;
+}
+
+.talkBox p{
+    padding: 0 5% 5% 5%;
+}
 
