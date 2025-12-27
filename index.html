@@ -11,44 +11,86 @@
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 <!--  font-family: "Libre Baskerville", serif;
 -->
+
+<style>
+      #password-gate {
+        text-align: center;
+        padding: 2rem;
+        font-family: Arial, sans-serif;
+      }
+      #error {
+        color: red;
+        margin-top: 1rem;
+      }
+      #content {
+        display: none;
+        
+      }
+    </style>
 </head>
 <body>
-    <main>
-        <div class="container">
-            <h1>Happy 2nd Year Friendship Anniversary Chuuu!</h1>
-            <div class="imgBox">
-                <div class="leftBox">
-                    <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
-                    <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
-                    <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
-                    <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
-                    <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
-                    <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
-                    <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
-                    <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
+
+    <div id="password-gate">
+        <h2>Please enter password to continue</h2>
+        <input type="password" id="password" placeholder="Password" />
+        <button onclick="checkPassword()">Submit</button>
+        <p id="error"></p>
+    </div>
+
+    <div id="content">
+        <main>
+            <div class="container">
+                <h1>Happy 2nd Year Friendship Anniversary Chuuu!</h1>
+                <div class="imgBox">
+                    <div class="leftBox">
+                        <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
+                        <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
+                        <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
+                        <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
+                        <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
+                        <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
+                        <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
+                        <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
+                    </div>
+        
+                    <img src="Snapchat-79877897.jpg" width="300px" height="300px" alt="">
+                    <div class="leftBox">
+                        <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
+                        <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
+                        <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
+                        <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
+                        <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
+                        <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
+                        <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
+                        <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
+                    </div>
+        
                 </div>
-                
-                <img src="Snapchat-79877897.jpg" width="300px" height="300px" alt="">
-
-                <div class="leftBox">
-                    <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
-                    <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
-                    <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
-                    <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
-                    <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
-                    <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
-                    <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
-                    <img src="./images/kablam-Heart-Glossy-Two.svg" alt="">
-                </div>
-
-                
-
+                <h3>Happy 2nd Year Friendship Anniversary My Gwapa Prinsesa!!</h3>
+                <img src="./images/linked-hearts.svg" alt="">
+        
+        
             </div>
-            <h3>Happy 2nd Year Friendship Anniversary My Gwapa Prinsesa!!</h3>
-            <img src="./images/linked-hearts.svg" alt="">
-            
-            
-        </div>
-    </main>
+        </main>
+    </div>
+
+    <script>
+    const correctPassword = "youandmebaby"; // CHANGE this to your password
+
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      const error = document.getElementById("error");
+      const content = document.getElementById("content");
+      const gate = document.getElementById("password-gate");
+
+      if (input === correctPassword) {
+        error.textContent = "";
+        gate.style.display = "none";
+        content.style.display = "block";
+      } else {
+        error.textContent = "Incorrect password. Try again.";
+      }
+    }
+  </script>    
 </body>
 </html>
