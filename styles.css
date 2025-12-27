@@ -66,7 +66,9 @@ font-family: "Libre Baskerville", serif;
 
 html{
     background: url(images/tulipField.jpg);
+    background-attachment: fixed;
     background-position: 50%;
+    background-repeat: no-repeat;
 }
 
 body{
